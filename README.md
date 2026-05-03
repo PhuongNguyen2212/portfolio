@@ -1,5 +1,7 @@
 # phuong.dev
 
+[![CI](https://github.com/PhuongNguyen2212/portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PhuongNguyen2212/portfolio/actions/workflows/ci.yml)
+
 Personal portfolio of **Tran Dinh Phuong Nguyen** — a developer crafting cinematic, performant web experiences.
 
 Live: <https://phuong-dev.vercel.app>
@@ -118,6 +120,19 @@ Valid levels: `'Learning' | 'Intermediate' | 'Solid' | 'In Progress'`.
 - **Passive scroll listeners** + `IntersectionObserver` over scroll events.
 - **`next/image` only** — never raw `<img>`.
 - **Conventional Commits** — `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `perf:`.
+
+---
+
+## CI / CD
+
+| Stage | Trigger | What runs | Where |
+|-------|---------|-----------|-------|
+| **CI** | every push to `main` and every PR targeting `main` | `npm ci` → `eslint` → `tsc --noEmit` → `next build` | GitHub Actions, [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+| **CD** | every push to `main` (production) and every PR (preview) | `next build` and deploy | Vercel (zero-config) |
+
+**One-time CD setup:** import this repo at <https://vercel.com/new>, accept the auto-detected Next.js settings, click **Deploy**. From then on, every merge to `main` ships to production and every PR gets a preview URL — no Action required.
+
+The CI workflow uses `concurrency: cancel-in-progress` so a new push to the same branch automatically cancels the previous run, saving runner minutes.
 
 ---
 
