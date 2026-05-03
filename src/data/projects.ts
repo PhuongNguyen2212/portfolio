@@ -10,7 +10,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
     status: "Completed",
     liveUrl: "https://phuong-dev.vercel.app",
-    githubUrl: "https://github.com/PhuongNguyen2212/my-portfolio",
+    githubUrl: "https://github.com/PhuongNguyen2212/portfolio",
     gradient: "from-[#1A0F00] to-[#3A2410]",
   },
   {

@@ -10,7 +10,6 @@ const TICKER_ITEMS = [
   "Framer Motion",
   "React",
   "Node.js",
-  "Cinema-grade UI",
 ] as const;
 
 export function Hero() {
