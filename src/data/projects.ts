@@ -16,12 +16,13 @@ export const projects: Project[] = [
   {
     id: 2,
     num: "II",
-    title: "Cinemix",
+    title: "Lumos Studio",
     description:
       "A movie discovery platform with personalized lists, ratings and trailers. Powered by the TMDB API.",
     tags: ["React", "TypeScript", "TMDB API"],
     status: "Building",
-    githubUrl: "https://github.com/PhuongNguyen2212",
+    liveUrl: "https://lumos-studio-rust.vercel.app/",
+    githubUrl: "https://github.com/PhuongNguyen2212/lumos-studio",
     gradient: "from-[#0A0A14] to-[#1F0A2A]",
   },
   {
